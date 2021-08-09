@@ -12,8 +12,8 @@ function post(req, res) {
     .then((QueryRes) => {
       if (!QueryRes.rows.length) {
         db.query(
-          "INSERT INTO admin (username, email, password) VALUES($1,$2,$3)",
-          [data.username, data.email, data.password[1]]
+          "INSERT INTO admin (username, email, password, lead_count) VALUES($1,$2,$3,$4)",
+          [data.username, data.email, data.password[1], 0]
         ).then(() => {
         //   res.send({ success: true });
           res.redirect("/signin");

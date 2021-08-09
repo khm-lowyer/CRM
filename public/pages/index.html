@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <!-- Favicon icon-->
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+
+  <!-- Libs CSS -->
+
+  <link rel="stylesheet" href="../assets/libs/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="../assets/libs/prismjs/plugins/line-numbers/prism-line-numbers.css">
+  <link rel="stylesheet" href="../assets/libs/prismjs/plugins/toolbar/prism-toolbar.css">
+  <link rel="stylesheet" href="../assets/libs/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/libs/dropzone/dist/dropzone.css">
+  <link href="../assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+
+
+
+
+
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.min.css">
+  <title>Homepage | CRM</title>
+</head>
+
+<body>
+  <div id="db-wrapper">
+    <!-- navbar vertical -->
+    <!-- Sidebar -->
+    <nav class="navbar-vertical navbar">
+      <div class="nav-scroller">
+        <!-- Brand logo -->
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/images/brand/logo/logo.svg" alt="" />
+        </a>
+        <!-- Navbar nav -->
+        <ul class="navbar-nav flex-column" id="sideNavbar">
+          <li class="nav-item">
+            <a class="nav-link has-arrow  active " href="./index.html">
+              <i data-feather="home" class="nav-icon icon-xs me-2"></i> Dashboard
+            </a>
+
+          </li>
+
+
+          <!-- Nav item -->
+          <li class="nav-item">
+            <div class="navbar-heading">Layouts & Pages</div>
+          </li>
+          <!-- Nav item -->
+          <li class="nav-item">
+            <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navPages"
+              aria-expanded="false" aria-controls="navPages">
+              <i data-feather="layers" class="nav-icon icon-xs me-2">
+              </i> Pages
+            </a>
+            <div id="navPages" class="collapse " data-bs-parent="#sideNavbar">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link " href="./pages/profile.html">
+                    Profile
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link has-arrow" href="./pages/settings.html">
+                    Settings
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="../pages/tables.html">
+              <i class="nav-icon icon-xs me-2 bi bi-table">
+              </i>
+              Tables
+            </a>
+          </li>
+
+          <!-- Nav item -->
+          <li class="nav-item">
+            <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navUtilities"
+              aria-expanded="false" aria-controls="navUtilities">
+              <i data-feather="database" class="nav-icon icon-xs me-2">
+              </i> Utilities
+            </a>
+            <div id="navUtilities" class="collapse " data-bs-parent="#sideNavbar">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link " href="../components/typography.html" aria-expanded="false">
+                    Typography
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="../components/borders.html" aria-expanded="false">
+                    Borders
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="../components/colors.html" aria-expanded="false">
+                    Colors
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="../components/shadows.html" aria-expanded="false">
+                    Shadows
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- Nav item -->
+          <li class="nav-item">
+            <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navMenuLevel"
+              aria-expanded="false" aria-controls="navMenuLevel">
+              <i data-feather="corner-left-down" class="nav-icon icon-xs me-2">
+              </i> Menu Level
+            </a>
+            <div id="navMenuLevel" class="collapse " data-bs-parent="#sideNavbar">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link has-arrow " href="#!" data-bs-toggle="collapse"
+                    data-bs-target="#navMenuLevelSecond" aria-expanded="false" aria-controls="navMenuLevelSecond">
+                    Two Level
+                  </a>
+                  <div id="navMenuLevelSecond" class="collapse" data-bs-parent="#navMenuLevel">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link " href="#!"> NavItem 1</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#!"> NavItem 2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link has-arrow  collapsed  " href="#!" data-bs-toggle="collapse"
+                    data-bs-target="#navMenuLevelThree" aria-expanded="false" aria-controls="navMenuLevelThree">
+                    Three Level
+                  </a>
+                  <div id="navMenuLevelThree" class="collapse " data-bs-parent="#navMenuLevel">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link  collapsed " href="#!" data-bs-toggle="collapse"
+                          data-bs-target="#navMenuLevelThreeOne" aria-expanded="false"
+                          aria-controls="navMenuLevelThreeOne">
+                          NavItem 1
+                        </a>
+                        <div id="navMenuLevelThreeOne" class="collapse collapse " data-bs-parent="#navMenuLevelThree">
+                          <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link " href="#!">
+                                NavChild Item 1
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#!"> Nav Item 2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Nav item -->
+          <li class="nav-item">
+            <div class="navbar-heading">Documentation</div>
+          </li>
+
+          <!-- Nav item -->
+          <li class="nav-item">
+            <a class="nav-link has-arrow " href="../docs/index.html">
+              <i data-feather="clipboard" class="nav-icon icon-xs me-2">
+              </i> Docs
+            </a>
+          </li>
+
+
+
+
+        </ul>
+
+      </div>
+    </nav>
+    <!-- Page content -->
+    <div id="page-content">
+      <div class="header @@classList">
+        <!-- navbar -->
+        <nav class="navbar-classic navbar navbar-expand-lg">
+          <a id="nav-toggle" href="#"><i data-feather="menu" class="nav-icon me-2 icon-xs"></i></a>
+          <div class="ms-lg-3 d-none d-md-none d-lg-block">
+            <!-- Form -->
+            <form class="d-flex align-items-center">
+              <input type="search" class="form-control" placeholder="Search" />
+            </form>
+          </div>
+          <!--Navbar nav -->
+          <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
+            <li class="dropdown stopevent">
+              <a class="btn btn-light btn-icon rounded-circle indicator
+          indicator-primary text-muted" href="#" role="button" id="dropdownNotification" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="icon-xs" data-feather="bell"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" aria-labelledby="dropdownNotification">
+                <div class="">
+                  <div class="border-bottom px-3 pt-2 pb-3 d-flex
+              justify-content-between align-items-center">
+                    <p class="mb-0 text-dark fw-medium fs-4">Notifications</p>
+                    <a href="#" class="text-muted">
+                      <span>
+                        <i class="me-1 icon-xxs" data-feather="settings"></i>
+                      </span>
+                    </a>
+                  </div>
+                  <!-- List group -->
+                  <ul class="list-group list-group-flush notification-list-scroll">
+                    <!-- List group item -->
+                    <li class="list-group-item bg-light">
+
+
+                      <a href="#" class="text-muted">
+                        <h5 class="fw-bold mb-1">Rishi Chopra</h5>
+                        <p class="mb-0">
+                          Mauris blandit erat id nunc blandit, ac eleifend dolor pretium.
+                        </p>
+                      </a>
+
+
+
+                    </li>
+                    <!-- List group item -->
+                    <li class="list-group-item">
+
+
+                      <a href="#" class="text-muted">
+                        <h5 class="fw-bold mb-1">Neha Kannned</h5>
+                        <p class="mb-0">
+                          Proin at elit vel est condimentum elementum id in ante. Maecenas et sapien metus.
+                        </p>
+                      </a>
+
+
+
+                    </li>
+                    <!-- List group item -->
+                    <li class="list-group-item">
+
+
+                      <a href="#" class="text-muted">
+                        <h5 class="fw-bold mb-1">Nirmala Chauhan</h5>
+                        <p class="mb-0">
+                          Morbi maximus urna lobortis elit sollicitudin sollicitudieget elit vel pretium.
+                        </p>
+                      </a>
+
+
+
+                    </li>
+                    <!-- List group item -->
+                    <li class="list-group-item">
+
+
+                      <a href="#" class="text-muted">
+                        <h5 class="fw-bold mb-1">Sina Ray</h5>
+                        <p class="mb-0">
+                          Sed aliquam augue sit amet mauris volutpat hendrerit sed nunc eu diam.
+                        </p>
+                      </a>
+
+
+
+                    </li>
+                  </ul>
+                  <div class="border-top px-3 py-2 text-center">
+                    <a href="#" class="text-inherit fw-semi-bold">
+                      View all Notifications
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- List -->
+            <li class="dropdown ms-2">
+              <a class="rounded-circle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div class="avatar avatar-md avatar-indicators avatar-online">
+                  <img alt="avatar" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle" />
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                <div class="px-4 pb-0 pt-2">
+
+
+                  <div class="lh-1 ">
+                    <h5 class="mb-1"> John E. Grainger</h5>
+                    <a href="#" class="text-inherit fs-6">View my profile</a>
+                  </div>
+                  <div class=" dropdown-divider mt-3 mb-2"></div>
+                </div>
+
+                <ul class="list-unstyled">
+
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>Edit
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>Activity Log
+                    </a>
+
+
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item text-primary" href="#">
+                      <i class="me-2 icon-xxs text-primary dropdown-item-icon" data-feather="star"></i>Go Pro
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>Account Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../index.html">
+                      <i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>Sign Out
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Container fluid -->
+      <div class="bg-primary pt-10 pb-21"></div>
+      <div class="container-fluid mt-n22 px-6">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-12">
+            <!-- Page header -->
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="mb-2 mb-lg-0">
+                  <h3 class="mb-0 fw-bold text-white">Projects</h3>
+                </div>
+                <div>
+                  <a href="#" class="btn btn-white">Create New Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+            <!-- card -->
+            <div class="card rounded-3">
+              <!-- card body -->
+              <div class="card-body">
+                <!-- heading -->
+                <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                  <div>
+                    <h4 class="mb-0">New Lead</h4>
+                  </div>
+                  <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                    <i class="bi bi-briefcase fs-4"></i>
+                  </div>
+                </div>
+                <!-- project number -->
+                <div>
+                  <h1 class="fw-bold">18</h1>
+                  <p class="mb-0"><span class="text-dark me-2">2</span>Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+            <!-- card -->
+            <div class="card rounded-3">
+              <!-- card body -->
+              <div class="card-body">
+                <!-- heading -->
+                <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                  <div>
+                    <h4 class="mb-0">Updates</h4>
+                  </div>
+                  <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                    <i class="bi bi-list-task fs-4"></i>
+                  </div>
+                </div>
+                <!-- project number -->
+                <div>
+                  <h1 class="fw-bold">132</h1>
+                  <p class="mb-0"><span class="text-dark me-2">28</span>Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+            <!-- card -->
+            <div class="card rounded-3">
+              <!-- card body -->
+              <div class="card-body">
+                <!-- heading -->
+                <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                  <div>
+                    <h4 class="mb-0">Teams</h4>
+                  </div>
+                  <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                    <i class="bi bi-people fs-4"></i>
+                  </div>
+                </div>
+                <!-- project number -->
+                <div>
+                  <h1 class="fw-bold">12</h1>
+                  <p class="mb-0"><span class="text-dark me-2">1</span>Completed</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+            <!-- card -->
+            <div class="card rounded-3">
+              <!-- card body -->
+              <div class="card-body">
+                <!-- heading -->
+                <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                  <div>
+                    <h4 class="mb-0">Converted</h4>
+                  </div>
+                  <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+                    <i class="bi bi-bullseye fs-4"></i>
+                  </div>
+                </div>
+                <!-- project number -->
+                <div>
+                  <h1 class="fw-bold">76%</h1>
+                  <p class="mb-0"><span class="text-success me-2">5%</span>Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- row  -->
+        <div class="row mt-6">
+          <div class="col-md-12 col-12">
+            <!-- card  -->
+            <div class="card">
+              <!-- card header  -->
+              <div class="card-header bg-white border-bottom-0 py-4">
+                <h4 class="mb-0">Active Projects</h4>
+              </div>
+              <!-- table  -->
+              <div class="table-responsive">
+                <table class="table text-nowrap mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Project name</th>
+                      <th>connect</th>
+                      <th>Status</th>
+                      <th>phone</th>
+                      <th>Manager</th>
+                      <th>Progress</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- start table -->
+                    <tr>
+                      <td class="align-middle">
+                        <div class="d-flex
+                            align-items-center">
+                          <div>
+                            <div class="icon-shape icon-md border p-4
+                                rounded-1">
+                              <img class="commint" src="../assets/images/icon/comments.png" alt="comment">
+                            </div>
+                          </div>
+                          <div class="ms-3 lh-1">
+                            <h5 class="fw-bold mb-1">Dropbox Design System</h5>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href=""><img style="max-width: 40px;" src="../assets/images/icon/email (1).png" alt="456"></a>
+                        <a href=""><img style="max-width: 40px;" src="../assets/images/icon/speech-bubble (1).png" alt="456"></a>
+                        <a href=""><img style="max-width: 40px;" src="../assets/images/icon/whatsapp (1).png" alt="456"></a>
+                        <a href=""><img style="max-width: 40px;" src="../assets/images/icon/whatsapp.png" alt="456"></a>
+                      </td>
+                      <td class="align-middle">
+                        <select name="" id="">
+                          <optgroup label="New">
+                            <option selected value="New">New</option>
+                            <option selected value="New">Follow Up</option>
+                            <option selected value="New">intrested</option>
+                          </optgroup>
+                          <optgroup label="No Answare">
+                            <option selected value="New">No Answare</option>
+                            <option selected value="New">Call Later</option>
+                            <option selected value="New">Not Intrested</option>
+                          </optgroup>
+                        </select>
+                      </td>
+                      <td class="align-middle">
+                        <h4>050-1234567</h4>
+                      </td>
+                      <td class="align-middle">
+                        <div class="avatar-group">
+                          <span class="avatar avatar-sm">
+                            <img alt="avatar" src="assets/images/avatar/avatar-1.jpg" class="rounded-circle">
+                          </span>
+                        </div>
+                      </td>
+                      <td class="align-middle text-dark">
+                        <div class="float-start me-3">15%</div>
+                        <div class="mt-2">
+                          <div class="progress" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width:15%" aria-valuenow="15"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- end table -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- card footer  -->
+              <div class="card-footer bg-white text-center">
+                <a href="#">View All Projects</a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Libs JS -->
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="../assets/libs/feather-icons/dist/feather.min.js"></script>
+  <script src="../assets/libs/prismjs/components/prism-core.min.js"></script>
+  <script src="../assets/libs/prismjs/components/prism-markup.min.js"></script>
+  <script src="../assets/libs/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  <!-- clipboard -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+
+
+  <!-- Theme JS -->
+  <script src="../assets/js/theme.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,4 +1,5 @@
 const path = require("path");
+const jwt = require("jsonwebtoken")
 const { send } = require("process");
 const db = require("../database/connect");
 
@@ -8,6 +9,7 @@ function get(req, res) {
 
 function post(req, res) {
   const data = req.body;
+  console.log(data);
   db.query("SELECT * FROM admin WHERE email=$1", [data.email])
     .then(({ rows }) => {
       if (rows.length) {
@@ -15,7 +17,9 @@ function post(req, res) {
           console.log(user);
           if(user.password === data.password)
           {
-              res.redirect("/")
+              res.cookie('email',data.email,{maxAge: '500000'});
+              res.cookie('password',data.password,{maxAge: '500000'});
+              res.redirect("/");
           }
           else{
               res.send({success : false})
