@@ -15,6 +15,8 @@ app.use((req,res)=>{
     res.sendFile(path.join(__dirname,"./public/pages/404-error.html"));
 });
 
+
+
 app.listen(port,()=>{
     console.log(`Server is run on http://localhost:${port}`)
 })
