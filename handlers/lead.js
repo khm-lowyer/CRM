@@ -56,20 +56,26 @@ function set(req, res) {
       res.send({ success: false, type: "catch" });
     });
 }
+
 //search function
-function search(get,set) {
+function search(req,res) {
   const data = req.body;
   db.query("SELECT * FROM lead WHERE id=$1", data.id).then(lead=>{
-    console.log(lead.rows);
+    // console.log(lead.rows);
   }).catch(error => {console.log(error)})
 }
 
-function statistic(get,set) {
-  const data = req.body;
-  // const stat = [];
-  db.query("SELECT COUNT(id) FROM lead WHERE status=$1", "new").then(lead=>{
-    console.log(lead.rows);
+function statistic(req,res) {
+  // const data = req.body;
+  const stat = [8];
+  db.query("SELECT COUNT(id) FROM lead WHERE status=$1", ["New"]).then(count=>{
+    console.log(count.rows);
+    stat[0]=count.rows;
+  }).catch(error => {console.log(error)})
 
+  db.query("SELECT AVG(id) FROM lead WHERE status=$1", ["New"]).then(count=>{
+    console.log(count.rows);
+    stat[0]=count.rows;
   }).catch(error => {console.log(error)})
 }
 

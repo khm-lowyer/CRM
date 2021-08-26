@@ -7,9 +7,11 @@ CREATE TABLE admin(
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
+    count_convert INTEGER,
     lead_count INTEGER NOT NULL,
     signup_date DATE NOT NULL DEFAULT CURRENT_DATE
 );
+
 CREATE TABLE lead(
     id SERIAL PRIMARY KEY,
     fullname VARCHAR(255) NOT NULL,
@@ -22,12 +24,14 @@ CREATE TABLE lead(
     story TEXT,
     submit DATE NOT NULL DEFAULT CURRENT_DATE
 );
+
 CREATE TABLE lead_comment(
     id SERIAL PRIMARY KEY,
     userid INTEGER REFERENCES lead(id),
     story TEXT,
     submit DATE NOT NULL DEFAULT CURRENT_DATE
 );
+
 INSERT INTO lead(
         fullname,
         phone,

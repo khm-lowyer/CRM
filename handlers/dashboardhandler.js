@@ -6,7 +6,7 @@ function get(req, res) {
   if (cookie.email) {
     db.query("SELECT * FROM lead")
       .then((data) => {
-        console.log(data.rows);
+        // console.log(data.rows);
         // console.log(data.rows[0].id);
         
       })

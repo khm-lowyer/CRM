@@ -29,6 +29,6 @@ router.post("/forget-password",forget_passwordhandler.post)
 router.get("/lead",leadhandler.get)
 router.post("/lead",leadhandler.set)
 router.post("/search",leadhandler.search)
-router.post("/statistic",leadhandler.statistic)
+router.get("/statistic",leadhandler.statistic)
 
 module.exports=(router);

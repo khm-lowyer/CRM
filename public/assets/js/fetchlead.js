@@ -2,7 +2,7 @@ function fetchData() {
   fetch("/lead")
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       var table = document
         .getElementById("tablelead")
         .getElementsByTagName("tbody")[0];
@@ -53,4 +53,13 @@ function fetchData() {
 //       console.log(content);
 // }
 
+function fetch_statistic() {
+  fetch("/statistic")
+    .then((resp) => resp.json())
+    .then((data) => {
+      console.log(data.rows);
+    }).catch(error =>{console.log(error);})
+    
+}
 fetchData();
+fetch_statistic();
